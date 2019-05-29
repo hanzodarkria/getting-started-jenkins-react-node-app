@@ -1,0 +1,11 @@
+version: '3'
+services:
+    blueocean:
+        ports:
+            - '8080:8080'
+        volumes:
+            - 'jenkins-data:/var/jenkins_home'
+            - '/var/run/docker.sock:/var/run/docker.sock'
+            - '$HOME:/home'
+        container_name: simple-jenkins-react-app
+        image: jenkinsci/blueocean
