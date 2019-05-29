@@ -9,5 +9,23 @@ services:
             - '$HOME:/home'
         container_name: getting-started-jenkins-react-node-app
         image: jenkinsci/blueocean
+
+# Below is for MAC User(s), it will solve the problem 
+# "Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock"
+# Below will spin up a socat container — a unix tool that creates two 
+# bidirectional streams between two endpoints, and use it as a relay.
+
+        environment:
+            - DOCKER_HOST=tcp://socat:2375
+        links:
+            - socat
+    socat:
+        image: bpack/socat
+        command: TCP4-LISTEN:2375,fork,reuseaddr UNIX-CONNECT:/var/run/docker.sock
+        volumes:
+            - '/var/run/docker.sock:/var/run/docker.sock'
+        expose:
+            - '2375'
+
 volumes:
     jenkins-data:
