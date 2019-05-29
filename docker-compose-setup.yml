@@ -7,7 +7,7 @@ services:
             - 'jenkins-data:/var/jenkins_home'
             - '/var/run/docker.sock:/var/run/docker.sock'
             - '$HOME:/home'
-        container_name: simple-jenkins-react-app
+        container_name: getting-started-jenkins-react-node-app
         image: jenkinsci/blueocean
 volumes:
     jenkins-data:

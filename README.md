@@ -17,7 +17,7 @@ docker run -d \
   -v jenkins-data:/var/jenkins_home \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v "$HOME":/home \
-  --name simple-jenkins-react-app \
+  --name getting-started-jenkins-react-node-app \
   jenkinsci/blueocean
 ```
 or if you have docker compose, then you can run: 
