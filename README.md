@@ -1,6 +1,6 @@
 # Getting started with Jenkins React & Node App
 
-This repository is for helping you get started quickly with [Building Jenkins for React & Node JS](https://jenkins.io/doc/tutorials/build-a-node-js-and-react-app-with-npm/) tutorial in the [Jenkins User Documentation](https://jenkins.io/doc/). Materials from that instructions are already provided in this repository.
+This repository is for helping you get started quickly with [Building Jenkins for React & Node JS](https://jenkins.io/doc/tutorials/build-a-node-js-and-react-app-with-npm/) tutorial in the [Jenkins User Documentation](https://jenkins.io/doc/). Materials from the tutorial are already provided in this repository.
 
 The repository contains a simple Node.js and React application which generates a web page with the content "Welcome to React" and is accompanied by a test to check that the application renders satisfactorily.
 
